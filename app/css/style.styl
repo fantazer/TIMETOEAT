@@ -1,0 +1,446 @@
+@import "variable/*"
+@import "icon/*"
+@import 'axis'
+@import 'jeet'
+@import 'rupture'
+
+border-box-html()
+fluid-media() //care flex box image
+rupture.scale = 0 400px 600px 780px 960px 1300px
+rupture.scale-names = 'xs' 'sm' 'm' 'l' 'xl' 'hd'
+jeet.gutter = 1
+yellow = #FFE400
+brown = #6D2B2B
+red = #EC3D3D
+orange = #FF693A
+
+.main-cont
+	center(1280px)
+body
+	font-family 'intro'
+a
+	text-decoration none
+f()
+	display flex
+fl()
+	flex-flow column
+fw()
+	flex-wrap wrap
+.header
+	box-shadow 0 0 5px rgba(0, 0, 0, 0.16)
+.header-wraper
+	flex(between)
+	fw()
+	height 86px
+.header-logo
+	padding 5px
+	margin 0 10px
+	img
+		max-width 200px
+.header-menu-el
+	color #6d2b2b
+	font-family open sans
+	font-size 14px
+	font-weight 600
+	line-height 15px
+	margin-right 15px
+//.header-menu
+.header-menu
+	flex(mid)
+	height 100%
+.header-contact
+	font-size 18px
+	padding 0 20px
+	flex(around)
+	fl()
+	.cont-plus
+		color #ec3d3d
+	.mark-plus
+		color #ec3d3d
+		font-family Impact
+		font-size 18px
+		text-transform uppercase
+	.mark-red
+		color #ec3d3d
+		font-family Intro
+		font-size 18px
+		text-transform uppercase
+	.mark-minus
+		color #3c3c3c
+		font-family Impact
+		font-size 18px
+		text-transform uppercase
+.header-contact-mail
+	color #3c3c3c
+	font-family verdana
+	font-size 14px
+//.header-contact-numb
+.header-button
+	fl()
+	flex(mid)
+.header-button-download
+	background yellow
+	color brown
+	width 100%
+	padding 12px 20px
+.header-button-callback
+	background orange
+	color white
+	width 100%
+	padding 12px 20px
+		
+.header-basket
+	height 100%
+	padding 0 15px
+	flex(mid)
+	fl()
+	background red
+//.header-basket-icon
+.header-basket-price
+	margin-top 10px
+	text-align center
+	width 100%
+	color white
+	font-family Intro
+	font-size 17px
+	font-weight 400
+	line-height 15px
+	text-transform uppercase
+.header-right-part
+	f()
+	height 100%
+
+//.type-service 
+//.main-cont 
+.type-service-wraper 
+	flex(around)
+	margin 60px 0
+.type-service-el
+	padding 30px
+	border-radius 5px
+	width 25%
+	flex(around)
+	fl()
+	&:hover
+		box-shadow 0 0 5px rgba(0, 0, 0, 0.07)
+.type-service-el-img
+	margin-bottom 20px
+.type-service-el-text
+	color #6d2b2b
+	font-family Intro
+	font-size 18px
+	font-weight 400
+	line-height 15px
+	text-transform uppercase
+	
+.line-title
+	flex(between)
+	margin-bottom -30px
+.line-title-dotted
+	width 100%
+	border-top 2px dotted red
+.line-title-text
+	color #6e2c2c
+	font-family Intro
+	font-size 25px
+	font-weight 400
+	line-height 33px
+	text-transform uppercase
+	padding 10px
+	margin-top 0px
+	white-space: nowrap
+
+.slider-food
+	padding 70px 0
+	bgi('bg-1.png')
+	background-repeat: repeat;
+.slider-food-wraper
+	width 90%
+.slider-food-el
+	padding 30px 0
+	flex(mid)
+	fl()
+	&:hover
+		background-color rgba(255, 255, 255, 0.8)
+		border-radius 5px
+		box-shadow 0 0 5px rgba(0, 0, 0, 0.07)
+//.slider-food-el-title
+//.slider-food-el-img
+.slider-food-el-text
+	font-family open sans
+	font-size 14px
+	font-weight 600
+	width 90%
+	text-align center
+.mark-red
+	color red
+.slider-food-el-info-price
+	color #ff4d4d
+	font-family Intro
+	font-size 25px
+	font-weight 400
+	line-height 33px
+	text-transform uppercase
+.slider-food-el-info
+	width 90%
+	margin-top 20px
+	flex(between)
+	span
+		text-shadow 0 -1px 0 rgba(240, 71, 60, 0.62)
+		color white
+		font-family Intro
+		font-size 18px
+		font-weight 400
+		text-transform uppercase
+		margin-right 10px
+
+.slider-food-el-info-but
+	flex(mid)
+	padding 10px
+	background-color #ec3d3d
+	background-image linear-gradient(to top, #ec3d3d 0%, #ff693a 99%, #ff693a 100%)
+	border-radius 3px
+	box-shadow 0 2px 0 #b93f3f
+	
+.slider-food-cont
+	flex(mid)
+.owl-prev
+	display: inline-block;
+	background: red;
+	color: white;
+	padding-left: 20px;
+	font-size: 40px;
+	line-height: 10px;
+	padding-right: 10px;
+	border-radius: 3px;
+	left -5%
+.owl-next
+	display: inline-block;
+	background: red;
+	color: white;
+	padding-right: 20px;
+	font-size: 40px;
+	line-height: 10px;
+	padding-left: 10px;
+	border-radius: 3px;
+	right -5%
+.owl-next,
+.owl-prev
+	position absolute
+	top 50%
+	margin-top -20px
+	
+.owl-carousel
+	position relative
+	
+.dish-wraper 
+	padding 70px 0
+	flex-wrap wrap
+	flex(around)
+.dish-el
+	width 25%
+	margin-bottom 40px
+	fl()
+	flex(around)
+	&:hover
+		border-radius 5px
+		box-shadow 0 0 5px rgba(0, 0, 0, 0.07)
+.dish-el-img 
+	margin 20px
+.dish-el-text
+	text-align center
+	color #6d2b2b
+	font-family Intro
+	font-size 18px
+	font-weight 400
+	line-height 15px
+	text-transform uppercase
+	padding-bottom 20px
+
+.about
+	bgi('bg-food.png')
+	
+.about-wraper
+	f()
+	justify-content flex-end
+	padding 90px 0
+.about-wraper-right
+	flex(mid)
+	fl()
+	width 50%
+	.mark-red
+		font-size 18px
+.about-wraper-right-img
+	padding-bottom 70px
+	flex(mid)
+.about-wraper-right-text
+	font-family Intro
+	font-weight 400
+	line-height 25px
+	font-size 14px
+	margin-bottom 20px
+	font-family open sans
+	font-weight 600
+	color #6e2c2c
+	
+.about-wraper-right-footer
+	width 90%
+	text-align center
+	font-family Intro
+	font-weight 400
+	line-height 25px
+	color #ec3d3d
+	font-size 18px
+	text-transform uppercase
+	
+
+.about-service
+	margin-top 140px
+	padding 0 5%
+	flex(mid)
+	fw()
+.about-service-el
+	width 20%
+	margin-bottom 40px
+	margin-left 20px
+	margin-right 20px
+	flex(mid)
+	fl()
+//.about-service-el-img
+.about-service-el-title
+	margin-top 30px
+	margin-bottom 10px
+	color #ec3d3d
+	font-size 18px
+	text-transform uppercase
+.about-service-el-text
+	color #6e2c2c
+	font-size 12px
+	text-align center
+	font-family open sans
+	line-height 18px
+	color #6e2c2c
+	font-weight 600
+	
+.review
+	bgi('bg-1.png')
+	background-repeat: repeat;
+	padding 50px 0px
+//.main-cont
+.review-wraper
+	flex(mid)
+	width 80%
+	margin 0 auto
+.review-slider
+	.owl-next
+		margin-right -7%
+	.owl-prev
+		margin-left -7%
+//.review-slider-row
+.review-slider-el
+	f()
+	margin-bottom 20px
+.review-slider-el-img
+	width 10%
+	margin-right 10px
+	img
+		width 100%
+.review-slider-el-info
+	f()
+	fl()
+	justify-content center
+	width 90%
+.review-slider-el-name
+	font-family Intro
+	font-weight 400
+	color #ec3d3d
+	font-size 18px
+	text-transform uppercase
+.review-slider-el-firm
+	color #6e2c2c
+	font-size 18px
+	text-transform uppercase
+	margin 5px 0
+.reverce-slider
+	.review-slider-el-info
+		align-items flex-end
+	.review-slider-el-img
+		margin-right 0
+		margin-left 20px
+	flex-flow row-reverse
+	.review-slider-el-text
+		text-align right
+		
+.review-slider-el-text
+	font-family open sans
+	font-size 14px
+	color #6e2c2c
+.owl-carousel
+	display block
+	
+.dotted-block
+	border-top 2px dotted red
+	
+.footer-nav-cont
+	font-size 18px
+	padding 0 20px
+	flex(around)
+	fl()
+	.cont-plus
+		color #ec3d3d
+	.mark-plus
+		color #ec3d3d
+		font-family Impact
+		font-size 18px
+		text-transform uppercase
+	.mark-red
+		color #ec3d3d
+		font-family Intro
+		font-size 18px
+		text-transform uppercase
+	.mark-minus
+		color #3c3c3c
+		font-family Impact
+		font-size 18px
+		text-transform uppercase
+.footer-contact-mail
+	color #3c3c3c
+	font-family verdana
+	font-size 14px
+	
+.footer
+	margin-top 40px
+	box-shadow 0 0 5px rgba(0, 0, 0, 0.16)
+//.footer-wraper
+.footer-nav
+	padding 10px
+	flex(between)
+//.footer-nav-img
+//.footer-nav-menu
+.footer-menu-el
+	color #6d2b2b
+	font-family Intro
+	font-size 17px
+	font-weight 600
+	line-height 15px
+	margin-right 15px
+	font-family open sans
+//.footer-nav-cont
+//.header-contact-mail
+//.header-contact-numb
+//.mark-red
+//.mark-plus
+//.mark-minus
+.footer-info
+	padding 10px
+	flex(mid)
+	background red
+.footer-info-text
+	margin-right 10px
+	color white
+	font-family Intro
+	font-size 14px
+	font-weight 400
+	line-height 15px
+	font-family Open Sans
+//.footer-info-img

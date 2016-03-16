@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+html(lang="en")
+	//Include header
+	include ./block_html/head.jade
+	include ./block_html/const.jade
+body
+	.header
+		.main-cont
+			.header-wraper
+				.header-logo
+					img(src="img/main-logo.png", alt="")
+				.header-menu
+					a(href="#").header-menu-el Услуги
+					a(href="#").header-menu-el Доставка и оплата
+					a(href="#").header-menu-el Контакты
+					a(href="#").header-menu-el О нас
+					a(href="#").header-menu-el Отзывы
+				.header-contact
+					.header-contact-mail malinalanch@mail.ru
+					.header-contact-numb 
+						<span class="mark-red"><span class="mark-plus">+</span>7 495</span> 231<span class="mark-minus">-</span>91<span class="mark-minus">-</span>12
+					.header-contact-numb 
+						<span class="mark-red"><span class="mark-plus">+</span>7 495</span> 997<span class="mark-minus">-</span>80<span class="mark-minus">-</span>54
+				.header-right-part
+					.header-button
+						a(href="#").header-button-download Скачать меню
+						a(href="#").header-button-callback Обратная связь
+					.header-basket
+						a(href="#").header-basket-icon
+							img(src="img/icon-basket.png", alt="")
+						.header-basket-price 99 999 р.
+	
+	.type-service
+		.main-cont
+			.type-service-wraper
+				a(href="#").type-service-el
+					.type-service-el-img
+						img(src="img/icon-type-1.png", alt="")
+					.type-service-el-text В офис
+
+				a(href="#").type-service-el
+					.type-service-el-img
+						img(src="img/icon-type-2.png", alt="")
+					.type-service-el-text Канапе
+
+				a(href="#").type-service-el
+					.type-service-el-img
+						img(src="img/icon-type-3.png", alt="")
+					.type-service-el-text Фуршеты
+	
+	mixin title(text)
+		.line-title
+			.line-title-dotted
+			.line-title-text #{text} 
+			.line-title-dotted
+
+	+title('Комплексные обеды')
+
+	.slider-food
+		.main-cont
+			.slider-food-cont
+				.slider-food-wraper.owl-carousel
+					- for (var x = 0; x < 6; x++)
+						.slider-food-el
+							.slider-food-el-title сытный обед
+							a(href="#").slider-food-el-img
+								img(src="img/dish-1.png", alt="")
+							.slider-food-el-text Хинкали, салат греческий,чесночная булочка <span class="mark-red">(1200 гр.)</span>
+							.slider-food-el-info
+								.slider-food-el-info-price 11150 р
+								a(href="#").slider-food-el-info-but
+									span в корзину
+									div 
+										img(src="img/icon-basket.png", alt="")
+	
+	+title('Наше меню')
+
+	- var dishAr = ['основные блюда','блюда на гриле','постные блюда','диетические блюда','салаты','десерты и фрукты','напитки','бутребродики']
+	
+	.dish
+		.main-cont
+			.dish-wraper
+				- each val,el in dishAr 
+					a(href="").dish-el
+						.dish-el-img
+							img(src="img/food-#{el+1}.png", alt="")
+						.dish-el-text #{val}
+
+	+title('О компании')
+
+	.about
+		.main-cont
+			.about-wraper
+				.about-wraper-right
+					.about-wraper-right-img
+						img(src="img/main-logo.png", alt="")
+					.about-wraper-right-text <span class="mark-red">Время обедать</span> – это качественное и недорогое питание с доставкой в Ваш офис. Мы предлагаем вкусное сбалансированное меню, используем только свежие и полезные продукты для приготовления каждого блюда. Заказывая доставку комплексных обедов в офис, Вы можете быть спокойны за сроки ее выполнения: мы обязательно приедем вовремя! Питательные первые и вторые блюда, свежие овощные салаты, горячие шашлыки на мангале, аппетитная пицца,полезный компот и многое-многое другое!
+
+					.about-wraper-right-footer Быстрая доставка готовой еды с 10:00 до 18:00от «Время обьедать» – это правильное решение для руководителя, думающего о своих подчиненных.
+			.about-service
+				- for (var a = 0; a < 7; a++)
+					.about-service-el
+						.about-service-el-img
+							img(src="img/icon-around-#{a+1}.png", alt="")
+						.about-service-el-title Качественная еда
+						.about-service-el-text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque velit et sequi reprehenderit enim laudantium dicta amet ad molestias 
+	
+	+title('Отзывы о нас')
+	.review 
+		.main-cont
+			.review-wraper
+				.review-slider.owl-carousel
+					- for (var a = 0; a < 2; a++)
+						.review-slider-row
+							.review-slider-el
+								.review-slider-el-img
+									img(src="img/avatar-1.png", alt="")
+								.review-slider-el-info
+									.review-slider-el-name Юлия
+									.review-slider-el-firm Mail.ru GROUP
+									.review-slider-el-text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus sequi libero provident id iusto aperiam possimus mollitia odit, quis minima, cum asperiores magni nulla error nisi. Reiciendis, omnis, dolore error dolorem, earum maiores corporis illo ea exercitationem accusamus minus qui quidem, consequuntur dolor enim eius! Labore blanditiis doloribus eaque animi non voluptate deleniti quas et est nobis nisi in!
+							.review-slider-el.reverce-slider
+								.review-slider-el-img
+									img(src="img/avatar-2.png", alt="")
+								.review-slider-el-info
+									.review-slider-el-name Юлия 
+									.review-slider-el-firm Mail.ru GROUP
+									.review-slider-el-text   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus sequi libero provident id iusto aperiam possimus mollitia odit, quis minima, cum asperiores magni nulla error nisi. Reiciendis, omnis, dolore error dolorem, earum maiores corporis illo ea exercitationem accusamus minus qui quidem, consequuntur dolor enim eius! 
+
+	.dotted-block
+	
+	.footer
+		.main-cont
+			.footer-wraper
+				.footer-nav
+					.footer-nav-img
+						img(src="img/jq-logo.png", alt="")
+					.footer-nav-menu
+						a(href="#").footer-menu-el О компании
+						a(href="#").footer-menu-el Сдедать заказ
+						a(href="#").footer-menu-el Доставка и оплата
+						a(href="#").footer-menu-el Вакансии
+						a(href="#").footer-menu-el Отзывы
+						a(href="#").footer-menu-el Контакты
+					.footer-nav-cont
+						.header-contact-mail malinalanch@mail.ru
+						.header-contact-numb 
+							<span class="mark-red"><span class="mark-plus">+</span>7 495</span> 231<span class="mark-minus">-</span>91<span class="mark-minus">-</span>12
+						.header-contact-numb 
+							<span class="mark-red"><span class="mark-plus">+</span>7 495</span> 997<span class="mark-minus">-</span>80<span class="mark-minus">-</span>54
+		.footer-info
+			.footer-info-text г. Москва, ул. Нижегородская д. 70, корпус 1 Принимаем к оплате
+			.footer-info-img
+				img(src="img/icon-pay.png", alt="")
+
+	//Include Footer
+	include ./block_html/script.jade
