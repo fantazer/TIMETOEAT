@@ -157,6 +157,7 @@ fw()
 .slider-food-wraper
 	width 90%
 .slider-food-el
+	position relative
 	padding 30px 0
 	flex(mid)
 	fl()
@@ -444,3 +445,275 @@ fw()
 	line-height 15px
 	font-family Open Sans
 //.footer-info-img
+
+.minus,
+.plus
+	flex(mid)
+	width 30px
+	height 30px
+	border 1px solid #eee
+	&:hover
+		cursor pointer
+	size 18px 17px
+	background-color #ec3d3d
+	background-image linear-gradient(to top, #ec3d3d 0%, #ff693a 99%, #ff693a 100%)
+	border 1px solid #EC3D3D
+	border-radius 3px
+	box-shadow 0 2px 0 #b93f3f
+	color white
+	line-height 14px
+	text-align center
+	display block
+
+.plus
+	line-height 16px
+.basket
+	padding 70px 0
+	bgi('bg-1.png')
+	background-repeat: repeat;
+//.basket-wrap
+.basket-table
+	width 100%
+	th
+		text-align center
+		color #6d2c2c
+		font-size 17px
+		font-weight 400
+		line-height 65px
+		text-transform uppercase
+		&:nth-child(1)
+			text-align left
+	tbody
+		tr
+			border-bottom 1px solid #eee
+	td
+		padding 5px 0
+		font-family Open sans
+		font-weight 600
+		font-size 14px
+.basket-table-product
+	flex(mid)
+	justify-content flex-start
+.basket-table-product-img
+	img
+		width 80px
+		margin-right 10px
+.basket-product-info
+	font-family Open sans
+	font-weight 600
+	font-size 14px
+.basket-table-product-name
+	color #333
+	font-size 17px
+	font-weight 600
+	text-transform uppercase
+//.basket-table-product-text
+.baket-table-date
+	text-align center
+	color #6d2c2c
+	span
+		color #ff4d4d
+.basket-table-price
+	color #ff4d4d
+	text-transform uppercase
+	text-align center
+	
+.basket-table-incr
+	flex(mid)
+	input
+		border 0px
+		text-align center
+		background none
+//.fa-angle-right
+.basket-table-total
+	color #ff4d4d
+	text-align center
+	text-transform uppercase
+	
+.basket-table-delete
+	a
+		color #ff4d4d
+		font-size 20px
+		display block
+		text-align center
+//.fa-times
+
+.basket-full-price
+	text-align center
+	margin-top 20px
+	font-family  Intro 
+	font-weight 400
+	line-height 50px
+	text-transform uppercase
+	color #6d2c2c
+	font-size 18px
+	span
+		color #ff4d4d
+		font-size 25px
+.basket-form
+	padding 70px 0
+.basket-form-wraper
+	f()
+.basket-form-left
+	width 50%
+.basket-form-row
+	f()
+	align-items center
+	margin-bottom 10px
+	input[type="text"]
+		width 50%
+	label
+		width 50%
+		text-align right
+		margin-right 10px
+		color #6d2c2c
+		font-family Intro
+		font-weight 600
+		line-height 42px
+		font-size 14px
+		font-family Open Sans
+	textarea
+		width 50%
+	textarea,input
+		border 0
+		border 1px solid #eee
+		padding 5px
+		font-family open sans
+.basket-form-row-adress
+	input[type="text"]
+		width 9%
+	label
+		width auto
+		margin-left 12px
+	justify-content flex-end
+			
+.basket-form-radio
+	align-items flex-start
+.basket-form-radio-el
+	width 50%
+	input[type="radio"] 
+		display:none;
+	input[type="radio"] + label span 
+		display:inline-block
+		width:14px!important
+		height:14px!important
+		margin:-1px 4px 0 0
+		vertical-align:middle
+		background:url('../img/chek-false.png') no-repeat
+		cursor:pointer
+	input[type="radio"]:checked + label span 
+		background:url('../img/chek-true.png') no-repeat
+.basket-form-right
+	width 40%
+	padding-left 20px
+	font-family open sans
+	font-weight 600
+	font-size 14px
+	line-height 25px
+	color #6e2c2c
+	span
+		display block
+//.mark-red
+.basket-form-radio-row-pay
+	text
+		position relative
+	img
+		position absolute
+		right -120px
+		top 2px
+		
+.basket-form-button
+	flex(mid)
+	margin-top 20px
+	a
+		text-shadow 0 -1px 0 rgba(240, 71, 60, 0.62)
+		color white
+		font-family Intro
+		font-size 17px
+		font-weight 400
+		text-transform uppercase
+		background-color #ec3d3d
+		background-image linear-gradient(to top, #ec3d3d 0%, #ff693a 99%, #ff693a 100%)
+		border 1px solid red
+		border-radius 3px
+		box-shadow 0 2px 0 #b93f3f
+		size 201px 44px
+		display block
+		text-align center
+		flex(mid)
+		
+.menu-page
+	padding 70px 0
+//.main-cont
+.menu-page-wraper
+	f()
+.menu-page-nav
+	width 20%
+	a
+		display block
+		color #505050
+		font-family Open Sans
+		font-size 16px
+		font-weight 600
+		text-transform uppercase
+		padding 10px
+.menu-page-nav-active
+	background-color #ec3d3d
+	border-radius 5px
+	color white!important
+	position relative
+	&:after
+		content ''
+		position absolute
+		triangle : 'right' 8px white
+		right 10px
+		top 12px
+.menu-page-nav-el
+	margin-bottom 20px
+.menu-page-content
+	width 80%
+	padding-left 40px
+.menu-page-top
+	f()
+.menu-page-top-week
+	width 30%
+	color #6d2c2c
+	font-family Intro
+	font-size 18px
+	line-height 50px
+	text-transform uppercase
+	span
+		color red
+		font-family Intro
+		font-size 17px
+.menu-page-top-day-wraper
+	flex(between)
+	width 70%
+	
+.menu-page-top-day
+	color #6e2c2c
+	font-size 25px
+	font-weight 400
+	text-transform uppercase
+.menu-page-defautl
+	opacity 0.55
+//.menu-page-active
+.menu-page-curent
+	padding 5px
+	color white
+	background red
+	border-radius 5px
+.menu-page-items
+	margin-top 20px
+	.slider-food-el
+		col(1/3,cycle:3)
+		margin-bottom 20px
+
+.menu-page-items-date
+	position absolute
+	top 0
+	right 0
+	padding 5px
+	color white
+	background red
+	border-radius 5px

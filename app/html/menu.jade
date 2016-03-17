@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+html(lang="en")
+	//Include header
+	include ./block_html/head.jade
+	include ./block_html/const.jade
+body
+	
+	include ./block_html/header.jade
+
+	.type-service
+		.main-cont
+			.type-service-wraper
+				a(href="#").type-service-el
+					.type-service-el-img
+						img(src="img/icon-type-1.png", alt="")
+					.type-service-el-text В офис
+
+				a(href="#").type-service-el
+					.type-service-el-img
+						img(src="img/icon-type-2.png", alt="")
+					.type-service-el-text Канапе
+
+				a(href="#").type-service-el
+					.type-service-el-img
+						img(src="img/icon-type-3.png", alt="")
+					.type-service-el-text Фуршеты
+	
+	+title('Меню в офис')
+	
+	.menu-page
+		.main-cont
+			.menu-page-wraper
+				.menu-page-nav
+					a(href="#").menu-page-nav-el.menu-page-nav-active Основные блюда
+					a(href="#").menu-page-nav-el Блюда на гриле
+					a(href="#").menu-page-nav-el Постные блюда
+					a(href="#").menu-page-nav-el Диетические блюда
+					a(href="#").menu-page-nav-el Салаты
+					a(href="#").menu-page-nav-el Десерты и фрукты
+					a(href="#").menu-page-nav-el Напитки 
+					a(href="#").menu-page-nav-el Бутербродики
+				.menu-page-content
+					.menu-page-top
+						.menu-page-top-week Дни недели <span>(14.03-20.03)</span>
+						.menu-page-top-day-wraper
+							a(href="#").menu-page-top-day.menu-page-defautl ПН
+							a(href="#").menu-page-top-day.menu-page-defautl ВТ
+							a(href="#").menu-page-top-day.menu-page-defautl СР
+							a(href="#").menu-page-top-day.menu-page-curent ЧТ
+							a(href="#").menu-page-top-day ПТ
+							a(href="#").menu-page-top-day СБ
+							a(href="#").menu-page-top-day ВС
+					.menu-page-items
+						- for (var x = 0; x < 6; x++)
+							.slider-food-el
+								.menu-page-items-date ЧТ
+								.slider-food-el-title сытный обед
+								a(href="#").slider-food-el-img
+									img(src="img/dish-1.png", alt="")
+								.slider-food-el-text Хинкали, салат греческий,чесночная булочка <span class="mark-red">(1200 гр.)</span>
+								.slider-food-el-info
+									.slider-food-el-info-price 11150 р
+									a(href="#").slider-food-el-info-but
+										span в корзину
+										div 
+											img(src="img/icon-basket.png", alt="")
+	.dotted-block
+	
+	include ./block_html/footer.jade
+	
+	//Include Footer
+	include ./block_html/script.jade

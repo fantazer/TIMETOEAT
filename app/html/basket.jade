@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+html(lang="en")
+	//Include header
+	include ./block_html/head.jade
+	include ./block_html/const.jade
+body
+	
+	include ./block_html/header.jade
+
+	.type-service
+		.main-cont
+			.type-service-wraper
+				a(href="#").type-service-el
+					.type-service-el-img
+						img(src="img/icon-type-1.png", alt="")
+					.type-service-el-text В офис
+
+				a(href="#").type-service-el
+					.type-service-el-img
+						img(src="img/icon-type-2.png", alt="")
+					.type-service-el-text Канапе
+
+				a(href="#").type-service-el
+					.type-service-el-img
+						img(src="img/icon-type-3.png", alt="")
+					.type-service-el-text Фуршеты
+	
+	+title('Корзина')
+	.basket
+		.main-cont
+			.basket-table-wrap
+				table.basket-table
+					thead
+						tr
+							th Наименование
+							th День недели
+							th Цена
+							th Количество
+							th Сумма
+							th Удалить
+					tbody
+						- for (var a = 0; a < 3; a++)
+							tr
+								td
+									.basket-table-product
+										.basket-table-product-img
+											img(src="img/dish-1.png", alt="")
+										.basket-product-info
+											.basket-table-product-name Обед №1:
+											.basket-table-product-text Хинкали, салат греческий, чесночная булочка
+								td
+									.baket-table-date вторник <span>(15.03)</span>
+								td
+									.basket-table-price 150 р
+								td
+									.basket-table-incr
+										span.minus -
+										input(type='text', value='0', size='1')
+										span.plus +
+								td
+									.basket-table-total 150 р
+								td
+									.basket-table-delete
+										a(href="#").fa.fa-times
+				.basket-full-price итого: <span>450 р</span>
+
+	+title('Оформление заказа')
+
+	.basket-form
+		.main-cont
+			.basket-form-wraper
+				.basket-form-left
+					form(action="")
+						+formRow('ФИО*')
+						+formRow('Контактный телефон*')
+						+formRow('Электронная почта')
+						+formRow('Улица')
+						.basket-form-row.basket-form-row-adress
+							label Дом*
+							input(type="text")
+							label Корп*
+							input(type="text")
+							label Кв./Оф*
+							input(type="text")
+						.basket-form-row
+							label Комментарий к заказу*
+							textarea(name="", rows="5")
+						.basket-form-row.basket-form-radio
+							label Оплата*
+							.basket-form-radio-el
+								.basket-form-radio-row
+									input#r1(type='radio', name='rr')
+									label(for='r1') 
+										span 
+										text Наличными
+								.basket-form-radio-row
+									input#r2(type='radio', name='rr')
+									label(for='r2') 
+										span 
+										text Картой курьеру
+								.basket-form-radio-row
+									input#r3(type='radio', name='rr')
+									label(for='r3') 
+										span 
+										text Выставить счет
+								.basket-form-radio-row.basket-form-radio-row-pay
+									input#r4(type='radio', name='rr')
+									label(for='r4') 
+										span 
+										text Онлайн платеж
+											img(src="img/icon-pay-system.png", alt="")
+				.basket-form-right <span class="mark-red"> Пункты отмеченные * обязательны для заполнения.</span>Качественное и недорогое питание с доставкой в Ваш офис. Мы предлагаем вкусное сбалансированное меню, Используем только свежие и полезные продукты для приготовления каждого блюда. Заказывая доставку комплексных обедов в офис, Вы можете быть спокойны за сроки ее выполнения: мы обязательно приедем вовремя! Питательные первые и вторые блюда, свежие овощные салаты, горячие шашлыки на мангале, аппетитная пицца,полезный компот и многое-многое другое!
+			.basket-form-button
+				a(href="#") 
+					span Оформить заказ
+	.dotted-block
+	
+	include ./block_html/footer.jade
+	
+	//Include Footer
+	include ./block_html/script.jade

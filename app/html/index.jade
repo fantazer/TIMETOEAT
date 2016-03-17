@@ -4,32 +4,9 @@ html(lang="en")
 	include ./block_html/head.jade
 	include ./block_html/const.jade
 body
-	.header
-		.main-cont
-			.header-wraper
-				.header-logo
-					img(src="img/main-logo.png", alt="")
-				.header-menu
-					a(href="#").header-menu-el Услуги
-					a(href="#").header-menu-el Доставка и оплата
-					a(href="#").header-menu-el Контакты
-					a(href="#").header-menu-el О нас
-					a(href="#").header-menu-el Отзывы
-				.header-contact
-					.header-contact-mail malinalanch@mail.ru
-					.header-contact-numb 
-						<span class="mark-red"><span class="mark-plus">+</span>7 495</span> 231<span class="mark-minus">-</span>91<span class="mark-minus">-</span>12
-					.header-contact-numb 
-						<span class="mark-red"><span class="mark-plus">+</span>7 495</span> 997<span class="mark-minus">-</span>80<span class="mark-minus">-</span>54
-				.header-right-part
-					.header-button
-						a(href="#").header-button-download Скачать меню
-						a(href="#").header-button-callback Обратная связь
-					.header-basket
-						a(href="#").header-basket-icon
-							img(src="img/icon-basket.png", alt="")
-						.header-basket-price 99 999 р.
 	
+	include ./block_html/header.jade
+
 	.type-service
 		.main-cont
 			.type-service-wraper
@@ -48,12 +25,6 @@ body
 						img(src="img/icon-type-3.png", alt="")
 					.type-service-el-text Фуршеты
 	
-	mixin title(text)
-		.line-title
-			.line-title-dotted
-			.line-title-text #{text} 
-			.line-title-dotted
-
 	+title('Комплексные обеды')
 
 	.slider-food
@@ -106,6 +77,7 @@ body
 						.about-service-el-text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque velit et sequi reprehenderit enim laudantium dicta amet ad molestias 
 	
 	+title('Отзывы о нас')
+
 	.review 
 		.main-cont
 			.review-wraper
@@ -129,29 +101,7 @@ body
 
 	.dotted-block
 	
-	.footer
-		.main-cont
-			.footer-wraper
-				.footer-nav
-					.footer-nav-img
-						img(src="img/jq-logo.png", alt="")
-					.footer-nav-menu
-						a(href="#").footer-menu-el О компании
-						a(href="#").footer-menu-el Сдедать заказ
-						a(href="#").footer-menu-el Доставка и оплата
-						a(href="#").footer-menu-el Вакансии
-						a(href="#").footer-menu-el Отзывы
-						a(href="#").footer-menu-el Контакты
-					.footer-nav-cont
-						.header-contact-mail malinalanch@mail.ru
-						.header-contact-numb 
-							<span class="mark-red"><span class="mark-plus">+</span>7 495</span> 231<span class="mark-minus">-</span>91<span class="mark-minus">-</span>12
-						.header-contact-numb 
-							<span class="mark-red"><span class="mark-plus">+</span>7 495</span> 997<span class="mark-minus">-</span>80<span class="mark-minus">-</span>54
-		.footer-info
-			.footer-info-text г. Москва, ул. Нижегородская д. 70, корпус 1 Принимаем к оплате
-			.footer-info-img
-				img(src="img/icon-pay.png", alt="")
-
+	include ./block_html/footer.jade
+	
 	//Include Footer
 	include ./block_html/script.jade
