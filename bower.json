@@ -20,6 +20,7 @@
   },
   "devDependencies": {
     "bPopup": "bpopup#^0.11.0",
-    "owl.carousel": "OwlCarousel2#^2.0.0-beta.3"
+    "owl.carousel": "OwlCarousel2#^2.0.0-beta.3",
+    "responsive-tabs": "^1.6.0"
   }
 }

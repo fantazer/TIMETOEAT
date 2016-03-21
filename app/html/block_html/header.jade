@@ -1,14 +1,45 @@
 .header
 	.main-cont
 		.header-wraper
+			.header-menu-toggle
+				i.fa.fa-bars
 			.header-logo
 				img(src="img/main-logo.png", alt="")
 			.header-menu
-				a(href="#").header-menu-el Услуги
-				a(href="#").header-menu-el Доставка и оплата
-				a(href="#").header-menu-el Контакты
-				a(href="#").header-menu-el О нас
-				a(href="#").header-menu-el Отзывы
+				.header-menu-el-wrap.header-menu-el-service
+					a(href="#").header-menu-el
+						span Услуги 
+							i.fa.fa-angle-down
+					.header-menu-sub-menu
+						a(href="#") Комплексные обеды с доставкой
+						a(href="#") Меню обедов в офис 
+						a(href="#") Доставка обедов Обеды в офис 
+						a(href="#") Доставка ланчей 
+						a(href="#") Комплексные обеды в офис 
+						a(href="#") Питание на предприятии 
+						a(href="#") Питание на стройке 
+						a(href="#") Питание на съемочной площадке 
+						a(href="#") Доставка супов и салатов 
+						a(href="#") Столовые «под ключ»
+
+				.header-menu-el-wrap
+					a(href="#").header-menu-el 
+						span Доставка и оплата
+				.header-menu-el-wrap
+					a(href="#").header-menu-el 
+						span Контакты
+				.header-menu-el-wrap
+					a(href="#").header-menu-el 
+						span О нас
+				.header-menu-el-wrap
+					a(href="#").header-menu-el 
+						span Отзывы
+				.header-menu-el-wrap.header-menu-el-wrap-mobile
+					a(href="#").header-menu-el 
+						span Скачать меню
+				.header-menu-el-wrap.header-menu-el-wrap-mobile
+					a(href="#").header-menu-el 
+						span Обратная связь
 			.header-contact
 				.header-contact-mail malinalanch@mail.ru
 				.header-contact-numb 
@@ -17,9 +48,12 @@
 					<span class="mark-red"><span class="mark-plus">+</span>7 495</span> 997<span class="mark-minus">-</span>80<span class="mark-minus">-</span>54
 			.header-right-part
 				.header-button
-					a(href="#").header-button-download Скачать меню
-					a(href="#").header-button-callback Обратная связь
+					a(href="#").header-button-download 
+						span Скачать меню
+					a(href="#").header-button-callback 
+						span Обратная связь
 				.header-basket
 					a(href="#").header-basket-icon
 						img(src="img/icon-basket.png", alt="")
+						i.fa.fa-shopping-basket
 					.header-basket-price 99 999 р.

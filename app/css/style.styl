@@ -6,13 +6,14 @@
 
 border-box-html()
 fluid-media() //care flex box image
-rupture.scale = 0 400px 600px 780px 960px 1300px
+rupture.scale = 0 400px 600px 780px 992px 1300px
 rupture.scale-names = 'xs' 'sm' 'm' 'l' 'xl' 'hd'
 jeet.gutter = 1
 yellow = #FFE400
 brown = #6D2B2B
 red = #EC3D3D
 orange = #FF693A
+
 
 .main-cont
 	center(1280px)
@@ -28,11 +29,28 @@ fw()
 	flex-wrap wrap
 .header
 	box-shadow 0 0 5px rgba(0, 0, 0, 0.16)
+	background white
+	z-index 3000
 .header-wraper
+	+below(768px)
+		fw()
+		height auto
 	flex(between)
-	fw()
 	height 86px
+	position relative
+	background white
+	z-index 3000
 .header-logo
+	+below(1280px)
+		img
+			width 100%
+	+below(768px)
+		order 1
+		width 40%
+		height 100%
+		height 86px
+		flex(mid)
+		//padding 20px 0
 	padding 5px
 	margin 0 10px
 	img
@@ -43,12 +61,39 @@ fw()
 	font-size 14px
 	font-weight 600
 	line-height 15px
-	margin-right 15px
-//.header-menu
+	padding 10px
+	height 100%
+	flex(mid)
+	white-space nowrap
+	
+
 .header-menu
+	+above(992px)
+		display flex  !important
+	+below(992px)
+		display none
+		width 100%
+		position absolute
+		top 86px
+		left 0
+		background red
+		height 60%
+		a
+			color white
+		z-index 2000
+	+below(768px)
+		fw()
+		top 140px
 	flex(mid)
 	height 100%
 .header-contact
+	+below(1280px)
+		padding 0 10px
+	+below(768px)
+		order 2
+		span
+			font-size 10px !important
+			font-size 10px
 	font-size 18px
 	padding 0 20px
 	flex(around)
@@ -71,11 +116,23 @@ fw()
 		font-size 18px
 		text-transform uppercase
 .header-contact-mail
+	+below(768px)
+		font-size 10px
 	color #3c3c3c
 	font-family verdana
 	font-size 14px
-//.header-contact-numb
+	
+.header-contact-numb
+	+below(768px)
+		font-size 10px
 .header-button
+	+below(1280px)
+		a
+			font-size 10px
+			height 45px
+			flex(mid)
+	+below(768px)
+		display none
 	fl()
 	flex(mid)
 .header-button-download
@@ -90,13 +147,23 @@ fw()
 	padding 12px 20px
 		
 .header-basket
+	+below(768px)
+		width 100%
+		height auto
 	height 100%
-	padding 0 15px
+	padding 5px
 	flex(mid)
 	fl()
 	background red
-//.header-basket-icon
+.header-basket-icon
+	+below(768px)
+		display block
+	i
+		display none
 .header-basket-price
+	+below(1280px)
+		font-size 12px
+		white-space nowrap
 	margin-top 10px
 	text-align center
 	width 100%
@@ -107,15 +174,24 @@ fw()
 	line-height 15px
 	text-transform uppercase
 .header-right-part
+	+below(768px)
+		order 3
+		width 100%
+		height auto
 	f()
 	height 100%
 
 //.type-service 
 //.main-cont 
 .type-service-wraper 
+	+below(768px)
+		margin 20px 0
 	flex(around)
 	margin 60px 0
 .type-service-el
+	+below(480px)
+		width 100%
+		padding 5px
 	padding 30px
 	border-radius 5px
 	width 25%
@@ -124,8 +200,12 @@ fw()
 	&:hover
 		box-shadow 0 0 5px rgba(0, 0, 0, 0.07)
 .type-service-el-img
+	+below(480px)
+		width 40%
 	margin-bottom 20px
 .type-service-el-text
+	+below(480px)
+		font-size 12px
 	color #6d2b2b
 	font-family Intro
 	font-size 18px
@@ -140,6 +220,8 @@ fw()
 	width 100%
 	border-top 2px dotted red
 .line-title-text
+	+below(768px)
+		font-size 14px
 	color #6e2c2c
 	font-family Intro
 	font-size 25px
@@ -151,6 +233,8 @@ fw()
 	white-space: nowrap
 
 .slider-food
+	+below(768px)
+		padding 20px 0
 	padding 70px 0
 	bgi('bg-1.png')
 	background-repeat: repeat;
@@ -176,6 +260,8 @@ fw()
 .mark-red
 	color red
 .slider-food-el-info-price
+	+below(1100px)
+		font-size 20px
 	color #ff4d4d
 	font-family Intro
 	font-size 25px
@@ -196,6 +282,9 @@ fw()
 		margin-right 10px
 
 .slider-food-el-info-but
+	+below(1100px)
+		span
+			font-size 16px
 	flex(mid)
 	padding 10px
 	background-color #ec3d3d
@@ -235,10 +324,17 @@ fw()
 	position relative
 	
 .dish-wraper 
+	+below(768px)
+		padding 20px 0
 	padding 70px 0
 	flex-wrap wrap
 	flex(around)
 .dish-el
+	+below(768px)
+		width 40%
+		margin-bottom 5px
+	+below(480px)
+		width 45%
 	width 25%
 	margin-bottom 40px
 	fl()
@@ -247,8 +343,12 @@ fw()
 		border-radius 5px
 		box-shadow 0 0 5px rgba(0, 0, 0, 0.07)
 .dish-el-img 
+	+below(480px)
+		width 50%
 	margin 20px
 .dish-el-text
+	+below(480px)
+		font-size 12px
 	text-align center
 	color #6d2b2b
 	font-family Intro
@@ -259,19 +359,32 @@ fw()
 	padding-bottom 20px
 
 .about
+	+below(768px)
+		background-image: none
 	bgi('bg-food.png')
-	
+	background-size 45%
 .about-wraper
+	+below(1280px)
+		flex(mid)
+		padding-bottom 40 !important
+	+below(768px)
+		padding 20px 0
+	+below(480px)
+		font-size 12px !important
 	f()
 	justify-content flex-end
 	padding 90px 0
 .about-wraper-right
+	+below(992px)
+		width 80%
 	flex(mid)
 	fl()
 	width 50%
 	.mark-red
 		font-size 18px
 .about-wraper-right-img
+	+below(760px)
+		padding-bottom 20px
 	padding-bottom 70px
 	flex(mid)
 .about-wraper-right-text
@@ -296,19 +409,29 @@ fw()
 	
 
 .about-service
+	+below(992px)
+		margin-top 20px
+		padding 0 2%
 	margin-top 140px
-	padding 0 5%
 	flex(mid)
 	fw()
 .about-service-el
+	+below(768px)
+		width 40%
+	+below(480px)
+		width 100%
 	width 20%
 	margin-bottom 40px
 	margin-left 20px
 	margin-right 20px
 	flex(mid)
 	fl()
-//.about-service-el-img
+.about-service-el-img
+	+below(480px)
+		width 40%
 .about-service-el-title
+	+below(992px)
+		text-align center
 	margin-top 30px
 	margin-bottom 10px
 	color #ec3d3d
@@ -383,6 +506,9 @@ fw()
 	border-top 2px dotted red
 	
 .footer-nav-cont
+	+below(768px)
+		span
+			font-size 10px !important
 	font-size 18px
 	padding 0 20px
 	flex(around)
@@ -414,11 +540,33 @@ fw()
 	box-shadow 0 0 5px rgba(0, 0, 0, 0.16)
 //.footer-wraper
 .footer-nav
+	+below(992px)
+		fw()
 	padding 10px
 	flex(between)
-//.footer-nav-img
-//.footer-nav-menu
+.footer-nav-img
+	+below(992px)
+		order 1
+		margin-left 10px
+.footer-nav-menu
+	+below(992px)
+		order 3
+		width 100%
+		margin 20px
+	+below(768px)
+		fw()
+		flex(mid)
+		margin 20px 0
+	flex(between)
 .footer-menu-el
+	white-space nowrap
+	+below(992px)
+		margin-right 0
+		font-size 14px
+	+below(768px)
+		margin 5px
+		width 45%
+		text-align center
 	color #6d2b2b
 	font-family Intro
 	font-size 17px
@@ -426,17 +574,27 @@ fw()
 	line-height 15px
 	margin-right 15px
 	font-family open sans
-//.footer-nav-cont
+.footer-nav-cont
+	+below(992px)
+		order 2
+		margin-bottom 10px
 //.header-contact-mail
 //.header-contact-numb
 //.mark-red
 //.mark-plus
 //.mark-minus
 .footer-info
-	padding 10px
+	+below(768px)
+		font-size 10px
 	flex(mid)
+	fw()
+	text-align center
+	padding 10px
 	background red
 .footer-info-text
+	+below(768px)
+		font-size 10px
+		margin-bottom 10px
 	margin-right 10px
 	color white
 	font-family Intro
@@ -468,6 +626,8 @@ fw()
 .plus
 	line-height 16px
 .basket
+	+below(768px)
+		padding 20px 0
 	padding 70px 0
 	bgi('bg-1.png')
 	background-repeat: repeat;
@@ -475,6 +635,10 @@ fw()
 .basket-table
 	width 100%
 	th
+		+below(1280px)
+			font-size 12px
+		+below(768px)
+			display none
 		text-align center
 		color #6d2c2c
 		font-size 17px
@@ -486,19 +650,37 @@ fw()
 	tbody
 		tr
 			border-bottom 1px solid #eee
+			+below(768px)
+				display flex
+				width 100%
+				fl()
+				padding 10px 0
+			td
+				+below(768px)
+					f()
+					flex(mid)
+					width 100%
 	td
 		padding 5px 0
 		font-family Open sans
 		font-weight 600
 		font-size 14px
 .basket-table-product
+	+below(768px)
+		flex(mid)
+		fw()
 	flex(mid)
 	justify-content flex-start
 .basket-table-product-img
+	+below(768px)
+		img
+			width 120px!important
 	img
 		width 80px
 		margin-right 10px
 .basket-product-info
+	+below(768px)
+		text-align center
 	font-family Open sans
 	font-weight 600
 	font-size 14px
@@ -551,12 +733,29 @@ fw()
 		color #ff4d4d
 		font-size 25px
 .basket-form
+	+below(768px)
+		padding 20px 0
 	padding 70px 0
 .basket-form-wraper
+	+below(768px)
+		fw()
 	f()
 .basket-form-left
+	+below(768px)
+		width 100%
+		padding 0 10px
 	width 50%
 .basket-form-row
+	+below(768px)
+		fw()
+		input[type="text"]
+			width 100%!important
+		label
+			width 100%!important
+			text-align center !important
+		textarea
+			width 100%!important
+			
 	f()
 	align-items center
 	margin-bottom 10px
@@ -604,6 +803,8 @@ fw()
 	input[type="radio"]:checked + label span 
 		background:url('../img/chek-true.png') no-repeat
 .basket-form-right
+	+below(768px)
+		width 100%
 	width 40%
 	padding-left 20px
 	font-family open sans
@@ -643,13 +844,21 @@ fw()
 		flex(mid)
 		
 .menu-page
+	+below(992px)
+		padding 30px 0
 	padding 70px 0
 //.main-cont
 .menu-page-wraper
 	f()
+	fw()
 .menu-page-nav
+	+below(992px)
+		width 100%
 	width 20%
 	a
+		+below(992px)
+			padding 5px 20px
+			font-size 12px
 		display block
 		color #505050
 		font-family Open Sans
@@ -662,6 +871,10 @@ fw()
 	border-radius 5px
 	color white!important
 	position relative
+	+below(992px)
+		&:after
+			content ''
+			display none
 	&:after
 		content ''
 		position absolute
@@ -669,13 +882,26 @@ fw()
 		right 10px
 		top 12px
 .menu-page-nav-el
+	+below(992px)
+		margin-bottom 5px
+		text-align center
 	margin-bottom 20px
 .menu-page-content
+	+below(992px)
+		width 100%
+		padding 5px
 	width 80%
 	padding-left 40px
 .menu-page-top
+	+below(768px)
+		fw()
+		flex(mid)
+		text-align center
 	f()
 .menu-page-top-week
+	+below(768px)
+		width 100%
+		font-size 14px
 	width 30%
 	color #6d2c2c
 	font-family Intro
@@ -687,10 +913,15 @@ fw()
 		font-family Intro
 		font-size 17px
 .menu-page-top-day-wraper
+	+below(768px)
+		width 100%
+		flex(around)
 	flex(between)
 	width 70%
 	
 .menu-page-top-day
+	+below(768px)
+		font-size 14px
 	color #6e2c2c
 	font-size 25px
 	font-weight 400
@@ -707,6 +938,10 @@ fw()
 	margin-top 20px
 	.slider-food-el
 		col(1/3,cycle:3)
+		+below(768px)
+			col(1/2,cycle:2,uncycle:3)
+		+below(640px)
+			width 100%
 		margin-bottom 20px
 
 .menu-page-items-date
@@ -717,3 +952,293 @@ fw()
 	color white
 	background red
 	border-radius 5px
+	
+.vacancy
+	+below(768px)
+		padding 20px 0
+	padding 70px 0
+	.r-tabs-panel
+		font-family open sans
+		padding 10px 20px
+		font-family open sans!important
+		display none
+		p
+			font-size 14px
+			color #6e2c2c
+			margin 5px 0
+		ul
+			color #6e2c2c
+			font-family open sans
+			font-size 14px
+			padding-left 0px
+			margin 0
+		li
+			list-style none
+			line-height 24px
+			&:before
+				content '- '
+	.r-tabs-state-active
+		.vacancy-top
+			background red!important
+			border-radius 5px!important
+			.vacancy-top-name
+				color white!important
+			.vacancy-top-val
+				color white!important
+			.vacancy-top-but-triangle
+				transform rotate(180deg)!important
+	.r-tabs-panel
+		position relative
+		&:before
+			content ''
+			position absolute
+			triangle 'up' 8px red
+			bottom 0px
+			left 50%
+				
+//.main-cont 
+//.vacancy-wraper 
+.vacancy-el 
+	margin-bottom 10px
+	box-shadow: 0px 1px 1px #E4DFDF;
+	border-radius 5px
+.vacancy-top
+	+below(768px)
+		font-size 12px
+		fw()
+		padding-left 0px
+		flex(around)
+		box-shadow 1px 1px 4px grey
+	flex(between)
+	padding-left 10px
+.vacancy-top-name
+	+below(768px)
+		font-size 10px
+	color #6d2c2c
+	font-size 18px
+	font-weight 400
+	line-height 50px
+	text-transform uppercase
+.vacancy-top-val
+	+below(768px)
+		font-size 10px
+		span
+			font-size 12px !important
+	color #6d2c2c
+	font-weight 400
+	line-height 50px
+	text-transform uppercase
+	font-size 18px
+	span
+		font-size 25px
+
+.vacancy-top-but
+	+below(768px)
+		font-size 10px
+		border-radius 0
+		span
+			font-size 10px !important
+	+below(640px)
+		width 100%
+		flex(around)
+	flex(between)
+	padding 15px 20px
+	background red
+	border-radius 5px
+	font-size 16px
+	font-weight 600
+	text-transform uppercase
+	color white
+	font-family open sans
+	&:hover
+		cursor pointer
+.vacancy-top-but-triangle
+	triangle: "down" 8px white
+	margin-left 10px
+.vacancy-cont
+	padding 10px 20px
+	font-family open sans!important
+	
+	p
+		font-size 14px
+		color #6e2c2c
+		margin 5px 0
+	ul
+		color #6e2c2c
+		font-family open sans
+		font-size 14px
+		padding-left 0px
+		margin 0
+	li
+		list-style none
+		line-height 24px
+		&:before
+			content '- '
+		
+
+.vacancy_active
+	background red
+	border-radius 5px
+	.vacancy-top-name
+		color white
+	.vacancy-top-val
+		color white
+	.vacancy-top-but-triangle
+		transform rotate(180deg)
+
+.vacancy-cont-title
+	color #6e2c2c
+	font-family Intro
+	font-size 18px
+	line-height 30px
+	
+.conten-page
+	+below(768px)
+		padding 20px 0
+	padding 70px 0
+	font-family open sans
+	p
+		font-size 14px
+		color #6e2c2c
+		margin 5px 0
+	ul
+		color #6e2c2c
+		font-family open sans
+		font-size 14px
+		padding-left 0px
+		margin 0
+	li
+		list-style none
+		line-height 24px
+		&:before
+			content '- '
+		
+.conten-page-title
+	font-family Intro
+	text-align center
+	font-size 18px
+	text-transform uppercase
+	color #6e2c2c
+	margin-bottom 20px
+
+//.contact-page
+//.main-cont
+.contact-page-wraper
+	f()
+	fw()
+	padding 30px 0
+.contact-page-adress
+	+below(768px)
+		width 100%
+	width 50%
+	padding 20px
+	border-right 1px solid #eee
+.contact-page-adress-el
+	f()
+	margin-bottom 20px
+.contact-page-adress-icon
+	+below(768px)
+		img
+			width 40px
+	margin-right 10px
+.contact-page-info
+	+below(768px)
+		width 100%
+	width 50%
+	padding 20px
+	flex(mid)
+	fl()
+.contact-page-adress-info
+	+below(768px)
+		width 80%
+.contact-page-adress-title
+	color #6e2c2c
+	font-size 17px
+.contact-page-adress-text
+	color #6e2c2c
+	font-family open sans
+	font-size 14px
+	font-weight 600
+//.contact-page-info-logo
+
+.contact-page-info-text
+	font-family Intro
+	font-weight 400
+	line-height 25px
+	font-size 14px
+	font-family open sans
+	font-weight 600
+	color #6e2c2c
+	margin 40px 0
+	width 90%
+
+.contact-page-info-mark-text
+	width 90%
+	text-align center
+	font-family Intro
+	font-weight 400
+	line-height 25px
+	color #ec3d3d
+	font-size 18px
+	text-transform uppercase
+	
+.header-menu-el-service
+	position relative
+	+above(768px)
+		&:hover
+			.header-menu-sub-menu
+				display block
+.header-menu-sub-menu
+	+below(768px)
+		position relative
+		//display block
+		width 100%
+		text-align center
+	position absolute
+	background orange
+	width 300px
+	display none
+	a
+		display block
+		padding 10px
+		color white
+		font-size 14px
+		font-weight 600
+		font-family  open sans
+		tr(all)
+		&:hover
+			background red
+.header-menu-el-wrap
+	+below(768px)
+		width 100%
+		background red
+		height auto
+	height 100%
+	&:hover
+		background orange
+		a
+			color white
+.header-menu-toggle
+	+below(992px)
+		display flex
+	+below(768px)
+		order 4
+		position absolute
+		left 0px
+		height auto
+		padding 17px 30px
+		background orange
+	flex(mid)
+	height 100%
+	background red
+	color white
+	padding 20px 30px
+	font-size 24px
+	display none
+.header-menu-el-wrap-mobile
+	+below(768px)
+		display block
+	display none
+	
+.conten-page-wraper
+	padding 10px

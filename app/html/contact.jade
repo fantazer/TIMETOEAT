@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+html(lang="en")
+	//Include header
+	include ./block_html/head.jade
+	include ./block_html/const.jade
+body
+	
+	include ./block_html/header.jade
+
+	.contact-map
+		script(type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=feuH-g4ROn_1bid5pVBL-mcPOhEwH9iO&width=100%&height=533&lang=ru_RU&sourceType=constructor")
+	
+	+title('Контакты')
+	.contact-page
+		.main-cont
+			.contact-page-wraper
+				.contact-page-adress
+					.contact-page-adress-el
+						.contact-page-adress-icon
+							img(src="img/icon-contact-1.png", alt="")
+						.contact-page-adress-info
+							.contact-page-adress-title Адресса
+							.contact-page-adress-text Москва, Нижегородская улица, д. 70/1
+							.contact-page-adress-text Москва, проезд Добролюбова, д. 3 (Банкетный зал)
+					.contact-page-adress-el
+						.contact-page-adress-icon
+							img(src="img/icon-contact-2.png", alt="")
+						.contact-page-adress-info
+							.contact-page-adress-title телефоны
+							.contact-page-adress-text +7 495 231-91-12, +7 495 997-80-54
+					.contact-page-adress-el
+						.contact-page-adress-icon
+							img(src="img/icon-contact-3.png", alt="")
+						.contact-page-adress-info
+							.contact-page-adress-title метро
+							.contact-page-adress-text Марксистская, Рязанский проспект, Таганская
+					.contact-page-adress-el
+						.contact-page-adress-icon
+							img(src="img/icon-contact-4.png", alt="")
+						.contact-page-adress-info
+							.contact-page-adress-title часы работы
+							.contact-page-adress-text С 11:00 – до последнего клиента
+					.contact-page-adress-el
+						.contact-page-adress-icon
+							img(src="img/icon-contact-5.png", alt="")
+						.contact-page-adress-info
+							.contact-page-adress-title залы
+							.contact-page-adress-text 2 зала: 1 зал - 80 мест, 2 зал - 20 мест, Банкетный зал до 130 чел. 
+					.contact-page-adress-el
+						.contact-page-adress-icon
+							img(src="img/icon-contact-6.png", alt="")
+						.contact-page-adress-info
+							.contact-page-adress-title email
+							.contact-page-adress-text malinalanch@mail.ru
+					.contact-page-adress-el
+						.contact-page-adress-icon
+							img(src="img/icon-contact-7.png", alt="")
+						.contact-page-adress-info
+							.contact-page-adress-title реквизиты ООО "ДУЭТ"
+							.contact-page-adress-text Юридический адрес: 109052, г. Москва, Анадырский проезд , д. 61
+							.contact-page-adress-text ИНН 7716556514 КПП 771601001
+							.contact-page-adress-text ОГРН - 5067746257332
+
+
+				.contact-page-info
+					.contact-page-info-logo
+						img(src="img/main-logo.png", alt="")
+					.contact-page-info-text <span class="mark-red">Время обедать</span> – это качественное и недорогое питание с доставкой в Ваш офис. Мы предлагаем вкусное сбалансированное меню, используем только свежие и полезные продукты для приготовления каждого блюда. Заказывая доставку комплексных обедов в офис, Вы можете быть спокойны за сроки ее выполнения: мы обязательно приедем вовремя! Питательные первые и вторые блюда, свежие овощные салаты, горячие шашлыки на мангале, аппетитная пицца,полезный компот и многое-многое другое!
+
+					.contact-page-info-mark-text Быстрая доставка готовой еды с 10:00 до 18:00от «Время обьедать» – это правильное решение для руководителя, думающего о своих подчиненных.
+
+
+	.dotted-block 
+	
+	include ./block_html/footer.jade
+	
+	//Include Footer
+	include ./block_html/script.jade

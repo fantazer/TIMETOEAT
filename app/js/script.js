@@ -28,6 +28,17 @@ $(document).ready(function(){
 	    return false;
 
 	});
+
+	$('.header-menu-toggle').click(function(){
+		$('.header-menu').slideToggle(function(){
+			if ($(this).is(':visible'))
+			$(this).css('display','flex');
+		})
+	})
+	$('.header-menu-el-service').click(function(){
+		$('.header-menu-sub-menu').slideToggle();
+	})
+	
 	/* ###### init EasyDropDown style for selects  ######*/
 	/* ###### bower i easydropdown  ######*/
 	/*<select class="dropdown"> add class (dropdown)
@@ -52,14 +63,38 @@ $(document).ready(function(){
 
 	/* ###### init stickUp  ######*/
 	/* ###### bower i sticky  ######*/
-	/*$("#sticker").sticky({topSpacing:0});*/
-
-
+	/*$(".header").sticky({topSpacing:0});
+	if ($(window).width() <= '768'){
+		$(".header").on('sticky-start', function() {
+			$('.header-logo').slideToggle()
+			$('.header-contact').slideToggle()
+		});
+		$(".header").on('sticky-end', function() {
+			$('.header-logo').slideToggle()
+			$('.header-contact').slideToggle()
+		});
+	}
+*/
 	/* ###### init OwlCarousel2  ######*/
 	/*!!! add class owlCarousel !!!*/
 	/* ###### bower i OwlCarousel2 ######*/
 	$(".slider-food-wraper").owlCarousel({
 	 	items : 3,
+	 	responsive : {
+	 		0:{
+			 	items : 1
+		 	},
+		 	768:{
+			 	items : 2
+		 	},
+		 	960:{
+			 	items : 2
+		 	},
+		 	1280:{
+			 	items : 3
+		 	}
+		 	
+	  },
 	 	margin:50,
 	 	pagination : false,
 	 	autoPlay : true,
@@ -115,14 +150,27 @@ $(document).ready(function(){
 
 	/* ###### init responsive-tabs  ######*/
 	/* ###### bower i responsive-tabs  ######*/
-/*    $('#horizontalTab').responsiveTabs({
-        rotate: false,
-        startCollapsed: 'accordion',
-        collapsible: 'accordion',
+    
+    if ($(window).width() > '640'){
+			$('.vacancy-wraper').responsiveTabs({
+        collapsible: true,
         setHash: true,
-        active: 0
+        animation: 'slide',
+        duration: 300
+        //scrollToAccordion: true
         
-    });*/
+    	})
+		}
+		else{
+			$('.vacancy-wraper').responsiveTabs({
+        collapsible: true,
+        setHash: true,
+        animation: 'slide',
+        duration: 300,
+        scrollToAccordion: true,
+        startCollapsed: true
+    	});
+		}
 
 	/* ###### init fancybox  ######*/
 	/* ###### bower i fancybox  ######*/

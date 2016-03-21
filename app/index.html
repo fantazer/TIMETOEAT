@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="bower/normalize.css/normalize.css"/>
     <link rel="stylesheet" href="bower/components-font-awesome/css/font-awesome.css"/>
     <link rel="stylesheet" href="bower/owl.carousel/dist/assets/owl.carousel.css"/>
+    <link rel="stylesheet" href="bower/responsive-tabs/css/responsive-tabs.css"/>
     <!--endbuild-->
     <link rel="stylesheet" href="css/style.css"/>
     <link rel="stylesheet" href="http://webfonts.ru/import/intro.css"/>
@@ -19,8 +20,19 @@
   <div class="header">
     <div class="main-cont">
       <div class="header-wraper">
+        <div class="header-menu-toggle"><i class="fa fa-bars"></i></div>
         <div class="header-logo"><img src="img/main-logo.png" alt=""/></div>
-        <div class="header-menu"><a href="#" class="header-menu-el">Услуги</a><a href="#" class="header-menu-el">Доставка и оплата</a><a href="#" class="header-menu-el">Контакты</a><a href="#" class="header-menu-el">О нас</a><a href="#" class="header-menu-el">Отзывы</a></div>
+        <div class="header-menu">
+          <div class="header-menu-el-wrap header-menu-el-service"><a href="#" class="header-menu-el"><span>Услуги <i class="fa fa-angle-down"></i></span></a>
+            <div class="header-menu-sub-menu"><a href="#">Комплексные обеды с доставкой</a><a href="#">Меню обедов в офис </a><a href="#">Доставка обедов Обеды в офис </a><a href="#">Доставка ланчей </a><a href="#">Комплексные обеды в офис </a><a href="#">Питание на предприятии </a><a href="#">Питание на стройке </a><a href="#">Питание на съемочной площадке </a><a href="#">Доставка супов и салатов </a><a href="#">Столовые «под ключ»</a></div>
+          </div>
+          <div class="header-menu-el-wrap"><a href="#" class="header-menu-el"> <span>Доставка и оплата</span></a></div>
+          <div class="header-menu-el-wrap"><a href="#" class="header-menu-el"> <span>Контакты</span></a></div>
+          <div class="header-menu-el-wrap"><a href="#" class="header-menu-el"> <span>О нас</span></a></div>
+          <div class="header-menu-el-wrap"><a href="#" class="header-menu-el"> <span>Отзывы</span></a></div>
+          <div class="header-menu-el-wrap header-menu-el-wrap-mobile"><a href="#" class="header-menu-el"> <span>Скачать меню</span></a></div>
+          <div class="header-menu-el-wrap header-menu-el-wrap-mobile"><a href="#" class="header-menu-el"> <span>Обратная связь</span></a></div>
+        </div>
         <div class="header-contact">
           <div class="header-contact-mail">malinalanch@mail.ru</div>
           <div class="header-contact-numb">
@@ -33,8 +45,8 @@
           </div>
         </div>
         <div class="header-right-part">
-          <div class="header-button"><a href="#" class="header-button-download">Скачать меню</a><a href="#" class="header-button-callback">Обратная связь</a></div>
-          <div class="header-basket"><a href="#" class="header-basket-icon"><img src="img/icon-basket.png" alt=""/></a>
+          <div class="header-button"><a href="#" class="header-button-download"> <span>Скачать меню</span></a><a href="#" class="header-button-callback"> <span>Обратная связь</span></a></div>
+          <div class="header-basket"><a href="#" class="header-basket-icon"><img src="img/icon-basket.png" alt=""/><i class="fa fa-shopping-basket"></i></a>
             <div class="header-basket-price">99 999 р.</div>
           </div>
         </div>
@@ -201,41 +213,107 @@
   <div class="review"> 
     <div class="main-cont">
       <div class="review-wraper">
-        <div class="review-slider owl-carousel">
-          <div class="review-slider-row">
-            <div class="review-slider-el">
-              <div class="review-slider-el-img"><img src="img/avatar-1.png" alt=""/></div>
-              <div class="review-slider-el-info">
-                <div class="review-slider-el-name">Юлия</div>
-                <div class="review-slider-el-firm">Mail.ru GROUP</div>
-                <div class="review-slider-el-text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus sequi libero provident id iusto aperiam possimus mollitia odit, quis minima, cum asperiores magni nulla error nisi. Reiciendis, omnis, dolore error dolorem, earum maiores corporis illo ea exercitationem accusamus minus qui quidem, consequuntur dolor enim eius! Labore blanditiis doloribus eaque animi non voluptate deleniti quas et est nobis nisi in!</div>
-              </div>
-            </div>
-            <div class="review-slider-el reverce-slider">
-              <div class="review-slider-el-img"><img src="img/avatar-2.png" alt=""/></div>
-              <div class="review-slider-el-info">
-                <div class="review-slider-el-name">Юлия </div>
-                <div class="review-slider-el-firm">Mail.ru GROUP</div>
-                <div class="review-slider-el-text">  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus sequi libero provident id iusto aperiam possimus mollitia odit, quis minima, cum asperiores magni nulla error nisi. Reiciendis, omnis, dolore error dolorem, earum maiores corporis illo ea exercitationem accusamus minus qui quidem, consequuntur dolor enim eius! </div>
-              </div>
+        <div class="review-slider owl-carousel"> 
+          <!--.review-slider-row-->
+          <div class="review-slider-el">
+            <div class="review-slider-el-img"><img src="img/avatar-1.png" alt=""/></div>
+            <div class="review-slider-el-info">
+              <div class="review-slider-el-name">Юлия</div>
+              <div class="review-slider-el-firm">Mail.ru GROUP</div>
+              <div class="review-slider-el-text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus sequi libero provident id iusto aperiam possimus mollitia odit, quis minima, cum asperiores magni nulla error nisi. Reiciendis, omnis, dolore error dolorem, earum maiores corporis illo ea exercitationem accusamus minus qui quidem, consequuntur dolor enim eius! Labore blanditiis doloribus eaque animi non voluptate deleniti quas et est nobis nisi in!</div>
             </div>
           </div>
-          <div class="review-slider-row">
-            <div class="review-slider-el">
-              <div class="review-slider-el-img"><img src="img/avatar-1.png" alt=""/></div>
-              <div class="review-slider-el-info">
-                <div class="review-slider-el-name">Юлия</div>
-                <div class="review-slider-el-firm">Mail.ru GROUP</div>
-                <div class="review-slider-el-text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus sequi libero provident id iusto aperiam possimus mollitia odit, quis minima, cum asperiores magni nulla error nisi. Reiciendis, omnis, dolore error dolorem, earum maiores corporis illo ea exercitationem accusamus minus qui quidem, consequuntur dolor enim eius! Labore blanditiis doloribus eaque animi non voluptate deleniti quas et est nobis nisi in!</div>
-              </div>
+          <div class="review-slider-el reverce-slider">
+            <div class="review-slider-el-img"><img src="img/avatar-2.png" alt=""/></div>
+            <div class="review-slider-el-info">
+              <div class="review-slider-el-name">Юлия </div>
+              <div class="review-slider-el-firm">Mail.ru GROUP</div>
+              <div class="review-slider-el-text">  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus sequi libero provident id iusto aperiam possimus mollitia odit, quis minima, cum asperiores magni nulla error nisi. Reiciendis, omnis, dolore error dolorem, earum maiores corporis illo ea exercitationem accusamus minus qui quidem, consequuntur dolor enim eius! </div>
             </div>
-            <div class="review-slider-el reverce-slider">
-              <div class="review-slider-el-img"><img src="img/avatar-2.png" alt=""/></div>
-              <div class="review-slider-el-info">
-                <div class="review-slider-el-name">Юлия </div>
-                <div class="review-slider-el-firm">Mail.ru GROUP</div>
-                <div class="review-slider-el-text">  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus sequi libero provident id iusto aperiam possimus mollitia odit, quis minima, cum asperiores magni nulla error nisi. Reiciendis, omnis, dolore error dolorem, earum maiores corporis illo ea exercitationem accusamus minus qui quidem, consequuntur dolor enim eius! </div>
-              </div>
+          </div>
+          <!--.review-slider-row-->
+          <div class="review-slider-el">
+            <div class="review-slider-el-img"><img src="img/avatar-1.png" alt=""/></div>
+            <div class="review-slider-el-info">
+              <div class="review-slider-el-name">Юлия</div>
+              <div class="review-slider-el-firm">Mail.ru GROUP</div>
+              <div class="review-slider-el-text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus sequi libero provident id iusto aperiam possimus mollitia odit, quis minima, cum asperiores magni nulla error nisi. Reiciendis, omnis, dolore error dolorem, earum maiores corporis illo ea exercitationem accusamus minus qui quidem, consequuntur dolor enim eius! Labore blanditiis doloribus eaque animi non voluptate deleniti quas et est nobis nisi in!</div>
+            </div>
+          </div>
+          <div class="review-slider-el reverce-slider">
+            <div class="review-slider-el-img"><img src="img/avatar-2.png" alt=""/></div>
+            <div class="review-slider-el-info">
+              <div class="review-slider-el-name">Юлия </div>
+              <div class="review-slider-el-firm">Mail.ru GROUP</div>
+              <div class="review-slider-el-text">  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus sequi libero provident id iusto aperiam possimus mollitia odit, quis minima, cum asperiores magni nulla error nisi. Reiciendis, omnis, dolore error dolorem, earum maiores corporis illo ea exercitationem accusamus minus qui quidem, consequuntur dolor enim eius! </div>
+            </div>
+          </div>
+          <!--.review-slider-row-->
+          <div class="review-slider-el">
+            <div class="review-slider-el-img"><img src="img/avatar-1.png" alt=""/></div>
+            <div class="review-slider-el-info">
+              <div class="review-slider-el-name">Юлия</div>
+              <div class="review-slider-el-firm">Mail.ru GROUP</div>
+              <div class="review-slider-el-text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus sequi libero provident id iusto aperiam possimus mollitia odit, quis minima, cum asperiores magni nulla error nisi. Reiciendis, omnis, dolore error dolorem, earum maiores corporis illo ea exercitationem accusamus minus qui quidem, consequuntur dolor enim eius! Labore blanditiis doloribus eaque animi non voluptate deleniti quas et est nobis nisi in!</div>
+            </div>
+          </div>
+          <div class="review-slider-el reverce-slider">
+            <div class="review-slider-el-img"><img src="img/avatar-2.png" alt=""/></div>
+            <div class="review-slider-el-info">
+              <div class="review-slider-el-name">Юлия </div>
+              <div class="review-slider-el-firm">Mail.ru GROUP</div>
+              <div class="review-slider-el-text">  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus sequi libero provident id iusto aperiam possimus mollitia odit, quis minima, cum asperiores magni nulla error nisi. Reiciendis, omnis, dolore error dolorem, earum maiores corporis illo ea exercitationem accusamus minus qui quidem, consequuntur dolor enim eius! </div>
+            </div>
+          </div>
+          <!--.review-slider-row-->
+          <div class="review-slider-el">
+            <div class="review-slider-el-img"><img src="img/avatar-1.png" alt=""/></div>
+            <div class="review-slider-el-info">
+              <div class="review-slider-el-name">Юлия</div>
+              <div class="review-slider-el-firm">Mail.ru GROUP</div>
+              <div class="review-slider-el-text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus sequi libero provident id iusto aperiam possimus mollitia odit, quis minima, cum asperiores magni nulla error nisi. Reiciendis, omnis, dolore error dolorem, earum maiores corporis illo ea exercitationem accusamus minus qui quidem, consequuntur dolor enim eius! Labore blanditiis doloribus eaque animi non voluptate deleniti quas et est nobis nisi in!</div>
+            </div>
+          </div>
+          <div class="review-slider-el reverce-slider">
+            <div class="review-slider-el-img"><img src="img/avatar-2.png" alt=""/></div>
+            <div class="review-slider-el-info">
+              <div class="review-slider-el-name">Юлия </div>
+              <div class="review-slider-el-firm">Mail.ru GROUP</div>
+              <div class="review-slider-el-text">  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus sequi libero provident id iusto aperiam possimus mollitia odit, quis minima, cum asperiores magni nulla error nisi. Reiciendis, omnis, dolore error dolorem, earum maiores corporis illo ea exercitationem accusamus minus qui quidem, consequuntur dolor enim eius! </div>
+            </div>
+          </div>
+          <!--.review-slider-row-->
+          <div class="review-slider-el">
+            <div class="review-slider-el-img"><img src="img/avatar-1.png" alt=""/></div>
+            <div class="review-slider-el-info">
+              <div class="review-slider-el-name">Юлия</div>
+              <div class="review-slider-el-firm">Mail.ru GROUP</div>
+              <div class="review-slider-el-text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus sequi libero provident id iusto aperiam possimus mollitia odit, quis minima, cum asperiores magni nulla error nisi. Reiciendis, omnis, dolore error dolorem, earum maiores corporis illo ea exercitationem accusamus minus qui quidem, consequuntur dolor enim eius! Labore blanditiis doloribus eaque animi non voluptate deleniti quas et est nobis nisi in!</div>
+            </div>
+          </div>
+          <div class="review-slider-el reverce-slider">
+            <div class="review-slider-el-img"><img src="img/avatar-2.png" alt=""/></div>
+            <div class="review-slider-el-info">
+              <div class="review-slider-el-name">Юлия </div>
+              <div class="review-slider-el-firm">Mail.ru GROUP</div>
+              <div class="review-slider-el-text">  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus sequi libero provident id iusto aperiam possimus mollitia odit, quis minima, cum asperiores magni nulla error nisi. Reiciendis, omnis, dolore error dolorem, earum maiores corporis illo ea exercitationem accusamus minus qui quidem, consequuntur dolor enim eius! </div>
+            </div>
+          </div>
+          <!--.review-slider-row-->
+          <div class="review-slider-el">
+            <div class="review-slider-el-img"><img src="img/avatar-1.png" alt=""/></div>
+            <div class="review-slider-el-info">
+              <div class="review-slider-el-name">Юлия</div>
+              <div class="review-slider-el-firm">Mail.ru GROUP</div>
+              <div class="review-slider-el-text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus sequi libero provident id iusto aperiam possimus mollitia odit, quis minima, cum asperiores magni nulla error nisi. Reiciendis, omnis, dolore error dolorem, earum maiores corporis illo ea exercitationem accusamus minus qui quidem, consequuntur dolor enim eius! Labore blanditiis doloribus eaque animi non voluptate deleniti quas et est nobis nisi in!</div>
+            </div>
+          </div>
+          <div class="review-slider-el reverce-slider">
+            <div class="review-slider-el-img"><img src="img/avatar-2.png" alt=""/></div>
+            <div class="review-slider-el-info">
+              <div class="review-slider-el-name">Юлия </div>
+              <div class="review-slider-el-firm">Mail.ru GROUP</div>
+              <div class="review-slider-el-text">  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus sequi libero provident id iusto aperiam possimus mollitia odit, quis minima, cum asperiores magni nulla error nisi. Reiciendis, omnis, dolore error dolorem, earum maiores corporis illo ea exercitationem accusamus minus qui quidem, consequuntur dolor enim eius! </div>
             </div>
           </div>
         </div>
@@ -273,6 +351,7 @@
   <script src="bower/jquery/dist/jquery.js"></script>
   <script src="bower/owl.carousel/dist/owl.carousel.min.js"></script>
   <script src="bower/bPopup/jquery.bpopup.min.js"></script>
+  <script src="bower/responsive-tabs/js/jquery.responsiveTabs.min.js"></script>
   <!-- endbuild-->
   <script src="js/script.js"></script>
 </body>
