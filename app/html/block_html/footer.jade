@@ -5,11 +5,11 @@
 				.footer-nav-img
 					img(src="img/jq-logo.png", alt="")
 				.footer-nav-menu
-					a(href="#").footer-menu-el О компании
-					a(href="#").footer-menu-el Сдедать заказ
-					a(href="#").footer-menu-el Доставка и оплата
-					a(href="#").footer-menu-el Вакансии
-					a(href="#").footer-menu-el Отзывы
+					a(href="basket.html").footer-menu-el basket
+					a(href="contact.html").footer-menu-el contact
+					a(href="menu.html").footer-menu-el menu
+					a(href="page.html").footer-menu-el page
+					a(href="vakancy.html").footer-menu-el vacancy
 					a(href="#").footer-menu-el Контакты
 				.footer-nav-cont
 					.header-contact-mail malinalanch@mail.ru
@@ -21,3 +21,36 @@
 		.footer-info-text г. Москва, ул. Нижегородская д. 70, корпус 1 Принимаем к оплате
 		.footer-info-img
 			img(src="img/icon-pay.png", alt="")
+
+//modal
+.modal-order
+		.modal-order-wraper
+			.modal-order-date чт
+			.modal-order-close 
+				i.fa.fa-times
+			.modal-order-title Сытный обед
+			.modal-order-smalltext Хинкали, салат греческий, чесночная булочка
+			.modal-order-product
+				.modal-order-product-img
+					img(src="img/dish-1.png", alt="")
+				.modal-order-product-wrap
+					.modal-order-product-title Пищевая ценность
+					.modal-order-product-info 
+						- for (var b = 0; b < 5; b++)
+							.modal-order-product-info-el  
+								.modal-order-product-name белки.г
+								.modal-order-product-numb 1000
+			.modal-order-footer
+				.modal-order-footer-col
+					span кол-во:
+					.basket-table-incr
+						span.minus -
+						input(type='text', value='0', size='1')
+						span.plus +
+				.modal-order-footer-price итого:
+					span.mark-red 150 р
+				.modal-order-footer-but
+					a(href="#").slider-food-el-info-but
+						span в корзину
+						div 
+							img(src="img/icon-basket.png", alt="")

@@ -29,6 +29,7 @@ $(document).ready(function(){
 
 	});
 
+	
 	$('.header-menu-toggle').click(function(){
 		$('.header-menu').slideToggle(function(){
 			if ($(this).is(':visible'))
@@ -52,13 +53,13 @@ $(document).ready(function(){
 	/* ###### init bpopup  ######*/
 	/* ###### bower i bpopup  ######*/
 	// Add class hide
-	// $('.section-main-form button').click(function(){
-	//	$('.section-modal').bPopup({
-	// 			closeClass:'section-modal-but',
-	//			position:['auto','auto'], // position center
-	//			follow: [true,false],
-	// 	}); 
-	//})
+	$('.header-logo').click(function(){
+		$('.modal-order').bPopup({
+				closeClass:'modal-order-close ',
+				position:['auto','auto'], // position center
+				follow: [true,false],
+		}); 
+	})
 
 
 	/* ###### init stickUp  ######*/

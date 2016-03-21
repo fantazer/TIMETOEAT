@@ -132,7 +132,7 @@
       <div class="footer-wraper">
         <div class="footer-nav">
           <div class="footer-nav-img"><img src="img/jq-logo.png" alt=""/></div>
-          <div class="footer-nav-menu"><a href="#" class="footer-menu-el">О компании</a><a href="#" class="footer-menu-el">Сдедать заказ</a><a href="#" class="footer-menu-el">Доставка и оплата</a><a href="#" class="footer-menu-el">Вакансии</a><a href="#" class="footer-menu-el">Отзывы</a><a href="#" class="footer-menu-el">Контакты</a></div>
+          <div class="footer-nav-menu"><a href="basket.html" class="footer-menu-el">basket</a><a href="contact.html" class="footer-menu-el">contact</a><a href="menu.html" class="footer-menu-el">menu</a><a href="page.html" class="footer-menu-el">page</a><a href="vakancy.html" class="footer-menu-el">vacancy</a><a href="#" class="footer-menu-el">Контакты</a></div>
           <div class="footer-nav-cont">
             <div class="header-contact-mail">malinalanch@mail.ru</div>
             <div class="header-contact-numb">
@@ -152,12 +152,61 @@
       <div class="footer-info-img"><img src="img/icon-pay.png" alt=""/></div>
     </div>
   </div>
+  <!--modal-->
+  <div class="modal-order">
+    <div class="modal-order-wraper">
+      <div class="modal-order-date">чт</div>
+      <div class="modal-order-close"> <i class="fa fa-times"></i></div>
+      <div class="modal-order-title">Сытный обед</div>
+      <div class="modal-order-smalltext">Хинкали, салат греческий, чесночная булочка</div>
+      <div class="modal-order-product">
+        <div class="modal-order-product-img"><img src="img/dish-1.png" alt=""/></div>
+        <div class="modal-order-product-wrap">
+          <div class="modal-order-product-title">Пищевая ценность</div>
+          <div class="modal-order-product-info"> 
+            <div class="modal-order-product-info-el"> 
+              <div class="modal-order-product-name">белки.г</div>
+              <div class="modal-order-product-numb">1000</div>
+            </div>
+            <div class="modal-order-product-info-el"> 
+              <div class="modal-order-product-name">белки.г</div>
+              <div class="modal-order-product-numb">1000</div>
+            </div>
+            <div class="modal-order-product-info-el"> 
+              <div class="modal-order-product-name">белки.г</div>
+              <div class="modal-order-product-numb">1000</div>
+            </div>
+            <div class="modal-order-product-info-el"> 
+              <div class="modal-order-product-name">белки.г</div>
+              <div class="modal-order-product-numb">1000</div>
+            </div>
+            <div class="modal-order-product-info-el"> 
+              <div class="modal-order-product-name">белки.г</div>
+              <div class="modal-order-product-numb">1000</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-order-footer">
+        <div class="modal-order-footer-col"><span>кол-во:</span>
+          <div class="basket-table-incr"><span class="minus">-</span>
+            <input type="text" value="0" size="1"/><span class="plus">+</span>
+          </div>
+        </div>
+        <div class="modal-order-footer-price">итого:<span class="mark-red">150 р</span></div>
+        <div class="modal-order-footer-but"><a href="#" class="slider-food-el-info-but"><span>в корзину</span>
+            <div> <img src="img/icon-basket.png" alt=""/></div></a></div>
+      </div>
+    </div>
+  </div>
   <!--Include Footer-->
   <!--build:js js/combined.js-->
   <script src="bower/jquery/dist/jquery.js"></script>
   <script src="bower/owl.carousel/dist/owl.carousel.min.js"></script>
   <script src="bower/bPopup/jquery.bpopup.min.js"></script>
   <script src="bower/responsive-tabs/js/jquery.responsiveTabs.min.js"></script>
+  <script src="bower/jquery-sticky/jquery.sticky.js"></script>
+  <script src="bower/bPopup/jquery.bpopup.js"></script>
   <!-- endbuild-->
   <script src="js/script.js"></script>
 </body>
